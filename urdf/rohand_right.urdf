@@ -1,0 +1,1402 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="rohand_right">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="-0.0633968150701131 -0.000716340531863045 0.00537800518826543"
+        rpy="0 0 0" />
+      <mass
+        value="0.0490769144926836" />
+      <inertia
+        ixx="2.28507622912721E-05"
+        ixy="-1.20447242454497E-06"
+        ixz="1.22632987533929E-06"
+        iyy="3.2411665653039E-05"
+        iyz="-1.46397168416614E-07"
+        izz="4.95405092753347E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://rohand_gen2_urdf_ros2/meshes_r/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://rohand_gen2_urdf_ros2/meshes_r/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="if_slider_link">
+    <inertial>
+      <origin
+        xyz="-0.0138796036604217 -1.8594650801132E-06 1.26099011855474E-06"
+        rpy="0 0 0" />
+      <mass
+        value="0.000489112297930526" />
+      <inertia
+        ixx="4.37009143613256E-09"
+        ixy="8.93574630422075E-12"
+        ixz="-9.29809134271828E-12"
+        iyy="3.84634978054086E-08"
+        iyz="-7.10729134497378E-11"
+        izz="3.92689519375431E-08" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://rohand_gen2_urdf_ros2/meshes_r/if_slider_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://rohand_gen2_urdf_ros2/meshes_r/if_slider_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="if_slider_link"
+    type="prismatic">
+    <origin
+      xyz="-0.071835 -0.02643 -0.0059651"
+      rpy="0 0 0.083145" />
+    <parent
+      link="base_link" />
+    <child
+      link="if_slider_link" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="-0.003"
+      upper="0.016"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="if_slider_abpart_link">
+    <inertial>
+      <origin
+        xyz="-0.0103724581281259 0.00350002220927786 -0.00156223622913047"
+        rpy="0 0 0" />
+      <mass
+        value="0.000420506796259996" />
+      <inertia
+        ixx="2.01568605967942E-09"
+        ixy="-2.80476701808087E-14"
+        ixz="-1.20043805301342E-09"
+        iyy="5.75820187932837E-09"
+        iyz="-1.52178584244023E-14"
+        izz="5.96661587289897E-09" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://rohand_gen2_urdf_ros2/meshes_r/if_slider_abpart_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://rohand_gen2_urdf_ros2/meshes_r/if_slider_abpart_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="if_slider_abpart_link"
+    type="continuous">
+    <origin
+      xyz="-0.029 -0.0034875 -0.00030444"
+      rpy="0.087237 -0.007223 -0.00063172" />
+    <parent
+      link="if_slider_link" />
+    <child
+      link="if_slider_abpart_link" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="if_proximal_link">
+    <inertial>
+      <origin
+        xyz="-0.0163988859084298 0.00759958866960932 -0.0065102569757599"
+        rpy="0 0 0" />
+      <mass
+        value="0.00193522991741753" />
+      <inertia
+        ixx="1.06211794347403E-07"
+        ixy="-1.11465902433644E-11"
+        ixz="-2.13926270446394E-08"
+        iyy="2.3257327919907E-07"
+        iyz="-4.24011688276789E-12"
+        izz="2.34011859783491E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://rohand_gen2_urdf_ros2/meshes_r/if_proximal_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://rohand_gen2_urdf_ros2/meshes_r/if_proximal_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="if_proximal_link"
+    type="continuous">
+    <origin
+      xyz="-0.11237 -0.038159 0.0019394"
+      rpy="0.087248 -0.0072339 0.082513" />
+    <parent
+      link="base_link" />
+    <child
+      link="if_proximal_link" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="if_distal_link">
+    <inertial>
+      <origin
+        xyz="0.000662394093451354 0.00709506492779503 -0.00281286378403553"
+        rpy="0 0 0" />
+      <mass
+        value="0.000118307873360846" />
+      <inertia
+        ixx="1.56365966144697E-09"
+        ixy="-1.80274280593451E-24"
+        ixz="3.05077647525089E-14"
+        iyy="9.99018439677073E-11"
+        iyz="-2.63421482181194E-24"
+        izz="1.56485540828532E-09" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://rohand_gen2_urdf_ros2/meshes_r/if_distal_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://rohand_gen2_urdf_ros2/meshes_r/if_distal_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="if_distal_link"
+    type="continuous">
+    <origin
+      xyz="-0.034068 0 -0.011383"
+      rpy="0 0 0" />
+    <parent
+      link="if_proximal_link" />
+    <child
+      link="if_distal_link" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="if_connecting_link">
+    <inertial>
+      <origin
+        xyz="-0.0118153131945436 0.0048999932569327 -0.0121370812067865"
+        rpy="0 0 0" />
+      <mass
+        value="0.00020034120116847" />
+      <inertia
+        ixx="1.2752634523821E-08"
+        ixy="-2.4902660081821E-23"
+        ixz="-1.29989296741539E-08"
+        iyy="2.67058367602123E-08"
+        iyz="7.38982479739561E-22"
+        izz="1.3974571964516E-08" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://rohand_gen2_urdf_ros2/meshes_r/if_connecting_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://rohand_gen2_urdf_ros2/meshes_r/if_connecting_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="if_connecting_link"
+    type="continuous">
+    <origin
+      xyz="-0.11996 -0.036476 0.0065579"
+      rpy="0.087248 -0.0072339 0.082513" />
+    <parent
+      link="base_link" />
+    <child
+      link="if_connecting_link" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="mf_slider_link">
+    <inertial>
+      <origin
+        xyz="-0.013879702817566 -1.75947020735964E-06 1.4262897265532E-06"
+        rpy="0 0 0" />
+      <mass
+        value="0.000489115418477034" />
+      <inertia
+        ixx="4.37009627219257E-09"
+        ixy="7.95766499622848E-12"
+        ixz="-9.99277505120737E-12"
+        iyy="3.84580605024609E-08"
+        iyz="-1.31204773519141E-13"
+        izz="3.92760011285545E-08" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://rohand_gen2_urdf_ros2/meshes_r/mf_slider_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://rohand_gen2_urdf_ros2/meshes_r/mf_slider_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="mf_slider_link"
+    type="prismatic">
+    <origin
+      xyz="-0.074014 -0.010026 -0.001697"
+      rpy="0 -0.00010039 0.013228" />
+    <parent
+      link="base_link" />
+    <child
+      link="mf_slider_link" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="-0.003"
+      upper="0.016"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="mf_slider_abpart_link">
+    <inertial>
+      <origin
+        xyz="-0.010323264285653 0.00350002292310115 -0.00174053907577901"
+        rpy="0 0 0" />
+      <mass
+        value="0.000420506980543982" />
+      <inertia
+        ixx="2.08946213673735E-09"
+        ixy="-2.69555754110183E-14"
+        ixz="-1.29706971117539E-09"
+        iyy="5.75820227594418E-09"
+        iyz="-1.57506410941096E-14"
+        izz="5.89284160530842E-09" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://rohand_gen2_urdf_ros2/meshes_r/mf_slider_abpart_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://rohand_gen2_urdf_ros2/meshes_r/mf_slider_abpart_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="mf_slider_abpart_link"
+    type="continuous">
+    <origin
+      xyz="-0.029 -0.0035008 0"
+      rpy="6.1564E-05 9.9576E-05 0" />
+    <parent
+      link="mf_slider_link" />
+    <child
+      link="mf_slider_abpart_link" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="mf_proximal_link">
+    <inertial>
+      <origin
+        xyz="-0.0179827795697336 0.00759996514036998 -0.00814933453477135"
+        rpy="0 0 0" />
+      <mass
+        value="0.0023771786956887" />
+      <inertia
+        ixx="1.47322996845852E-07"
+        ixy="-3.16398787910878E-12"
+        ixz="-4.59453957723119E-08"
+        iyy="3.6218269440909E-07"
+        iyz="3.57651056034204E-13"
+        izz="3.44056136751528E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://rohand_gen2_urdf_ros2/meshes_r/mf_proximal_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://rohand_gen2_urdf_ros2/meshes_r/mf_proximal_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="mf_proximal_link"
+    type="continuous">
+    <origin
+      xyz="-0.11567 -0.018179 0.0068982"
+      rpy="7.2594E-05 0 0.013228" />
+    <parent
+      link="base_link" />
+    <child
+      link="mf_proximal_link" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="mf_distal_link">
+    <inertial>
+      <origin
+        xyz="0.000586079323725605 0.00709506528110874 -0.00284486724888143"
+        rpy="0 0 0" />
+      <mass
+        value="0.000118307873360846" />
+      <inertia
+        ixx="1.56317553454943E-09"
+        ixy="7.41238531225179E-25"
+        ixz="-8.56048260805045E-14"
+        iyy="9.99018439677073E-11"
+        iyz="-2.76678999668247E-24"
+        izz="1.56533953518285E-09" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://rohand_gen2_urdf_ros2/meshes_r/mf_distal_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://rohand_gen2_urdf_ros2/meshes_r/mf_distal_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="mf_distal_link"
+    type="continuous">
+    <origin
+      xyz="-0.038382 0 -0.014438"
+      rpy="0 0 0" />
+    <parent
+      link="mf_proximal_link" />
+    <child
+      link="mf_distal_link" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="mf_connecting_link">
+    <inertial>
+      <origin
+        xyz="-0.0138037969008544 0.0048999901094755 -0.0137176447329691"
+        rpy="0 0 0" />
+      <mass
+        value="0.000215109025045747" />
+      <inertia
+        ixx="1.69329865051394E-08"
+        ixy="-2.00358312711131E-16"
+        ixz="-1.8228094271476E-08"
+        iyy="3.73207660087911E-08"
+        iyz="-9.14624393591275E-17"
+        izz="2.0410724941395E-08" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://rohand_gen2_urdf_ros2/meshes_r/mf_connecting_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://rohand_gen2_urdf_ros2/meshes_r/mf_connecting_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="mf_connecting_link"
+    type="continuous">
+    <origin
+      xyz="-0.12313 -0.015578 0.011298"
+      rpy="7.2594E-05 0 0.013228" />
+    <parent
+      link="base_link" />
+    <child
+      link="mf_connecting_link" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="rf_slider_link">
+    <inertial>
+      <origin
+        xyz="-0.0138797026370947 -1.76021184438747E-06 1.42640981565245E-06"
+        rpy="0 0 0" />
+      <mass
+        value="0.000489115404099442" />
+      <inertia
+        ixx="4.37009621555101E-09"
+        ixy="7.94652342719059E-12"
+        ixz="-9.99544728343584E-12"
+        iyy="3.8458059387297E-08"
+        iyz="-1.32444723206005E-13"
+        izz="3.92759998580057E-08" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://rohand_gen2_urdf_ros2/meshes_r/rf_slider_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://rohand_gen2_urdf_ros2/meshes_r/rf_slider_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="rf_slider_link"
+    type="prismatic">
+    <origin
+      xyz="-0.071688 0.0071015 -0.0024419"
+      rpy="0 -9.5082E-05 -0.056587" />
+    <parent
+      link="base_link" />
+    <child
+      link="rf_slider_link" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="-0.003"
+      upper="0.016"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="rf_slider_abpart_link">
+    <inertial>
+      <origin
+        xyz="-0.0103387716977423 0.00350002330771333 -0.00169907428808721"
+        rpy="0 0 0" />
+      <mass
+        value="0.000420506921107561" />
+      <inertia
+        ixx="2.06634480165828E-09"
+        ixy="-2.7256399588711E-14"
+        ixz="-1.26980145848518E-09"
+        iyy="5.75820634615874E-09"
+        iyz="-1.63368434431377E-14"
+        izz="5.91596243982466E-09" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://rohand_gen2_urdf_ros2/meshes_r/rf_slider_abpart_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://rohand_gen2_urdf_ros2/meshes_r/rf_slider_abpart_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="rf_slider_abpart_link"
+    type="continuous">
+    <origin
+      xyz="-0.029 -0.0035008 0"
+      rpy="6.3004E-05 9.8956E-05 0" />
+    <parent
+      link="rf_slider_link" />
+    <child
+      link="rf_slider_abpart_link" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="rf_proximal_link">
+    <inertial>
+      <origin
+        xyz="-0.0161908717628084 0.00759957050995384 -0.00701116809344462"
+        rpy="0 0 0" />
+      <mass
+        value="0.00193520051388196" />
+      <inertia
+        ixx="1.07646478229859E-07"
+        ixy="-1.09496434974302E-11"
+        ixz="-2.52779869505185E-08"
+        iyy="2.32569267815167E-07"
+        iyz="-4.50454752310323E-12"
+        izz="2.32572601739871E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://rohand_gen2_urdf_ros2/meshes_r/rf_proximal_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://rohand_gen2_urdf_ros2/meshes_r/rf_proximal_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="rf_proximal_link"
+    type="continuous">
+    <origin
+      xyz="-0.11367 0.0018657 0.0061535"
+      rpy="7.942E-05 0 -0.056587" />
+    <parent
+      link="base_link" />
+    <child
+      link="rf_proximal_link" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="rf_distal_link">
+    <inertial>
+      <origin
+        xyz="0.00083014692683589 0.00709506566472392 -0.00276825544161035"
+        rpy="0 0 0" />
+      <mass
+        value="0.000118307873360846" />
+      <inertia
+        ixx="1.56365927754767E-09"
+        ixy="-9.51975635063855E-25"
+        ixz="2.17147404910614E-14"
+        iyy="9.99018439677072E-11"
+        iyz="-1.86984410339351E-24"
+        izz="1.56485579218462E-09" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://rohand_gen2_urdf_ros2/meshes_r/rf_distal_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://rohand_gen2_urdf_ros2/meshes_r/rf_distal_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="rf_distal_link"
+    type="continuous">
+    <origin
+      xyz="-0.033703 0 -0.012425"
+      rpy="0 0 0" />
+    <parent
+      link="rf_proximal_link" />
+    <child
+      link="rf_distal_link" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="rf_connecting_link">
+    <inertial>
+      <origin
+        xyz="-0.0113775079315364 0.00489999354262863 -0.0125484106536328"
+        rpy="0 0 0" />
+      <mass
+        value="0.000200341201168546" />
+      <inertia
+        ixx="1.36754583905912E-08"
+        ixy="1.52930438358655E-22"
+        ixz="-1.30095427213463E-08"
+        iyy="2.67058367602204E-08"
+        iyz="1.1987225373667E-21"
+        izz="1.30517480977539E-08" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://rohand_gen2_urdf_ros2/meshes_r/rf_connecting_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://rohand_gen2_urdf_ros2/meshes_r/rf_connecting_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="rf_connecting_link"
+    type="continuous">
+    <origin
+      xyz="-0.12092 0.0049808 0.010553"
+      rpy="7.942E-05 0 -0.056587" />
+    <parent
+      link="base_link" />
+    <child
+      link="rf_connecting_link" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="lf_slider_link">
+    <inertial>
+      <origin
+        xyz="-0.0138797600029995 -1.6149447673551E-06 1.5811850779192E-06"
+        rpy="0 0 0" />
+      <mass
+        value="0.000489116937789504" />
+      <inertia
+        ixx="4.37008863936344E-09"
+        ixy="7.15580763171925E-12"
+        ixz="-1.06110475901558E-11"
+        iyy="3.84647308500176E-08"
+        iyz="7.09446566067936E-11"
+        izz="3.92703085422483E-08" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://rohand_gen2_urdf_ros2/meshes_r/lf_slider_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://rohand_gen2_urdf_ros2/meshes_r/lf_slider_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="lf_slider_link"
+    type="prismatic">
+    <origin
+      xyz="-0.068152 0.023874 -0.0049615"
+      rpy="0 -8.2704E-05 -0.11831" />
+    <parent
+      link="base_link" />
+    <child
+      link="lf_slider_link" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="-0.003"
+      upper="0.016"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="lf_slider_abpart_link">
+    <inertial>
+      <origin
+        xyz="-0.0103415592238707 0.00350002313239722 -0.00163116931611746"
+        rpy="0 0 0" />
+      <mass
+        value="0.000420506872592595" />
+      <inertia
+        ixx="2.06177465924499E-09"
+        ixy="-2.73836416272515E-14"
+        ixz="-1.25589853807684E-09"
+        iyy="5.75820629295893E-09"
+        iyz="-1.61363961476611E-14"
+        izz="5.92053196962545E-09" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://rohand_gen2_urdf_ros2/meshes_r/lf_slider_abpart_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://rohand_gen2_urdf_ros2/meshes_r/lf_slider_abpart_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="lf_slider_abpart_link"
+    type="continuous">
+    <origin
+      xyz="-0.029 -0.0034874 0.00030573"
+      rpy="-0.087286 -0.010238 0.00089593" />
+    <parent
+      link="lf_slider_link" />
+    <child
+      link="lf_slider_abpart_link" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="lf_proximal_link">
+    <inertial>
+      <origin
+        xyz="-0.0146539084936051 0.00760051493654849 -0.00629908667129828"
+        rpy="0 0 0" />
+      <mass
+        value="0.00177930732045757" />
+      <inertia
+        ixx="9.85282204034888E-08"
+        ixy="-5.15194115365529E-14"
+        ixz="-1.90224278845232E-08"
+        iyy="1.76559880739632E-07"
+        iyz="-2.56396668473677E-12"
+        izz="1.78006029655334E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://rohand_gen2_urdf_ros2/meshes_r/lf_proximal_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://rohand_gen2_urdf_ros2/meshes_r/lf_proximal_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="lf_proximal_link"
+    type="continuous">
+    <origin
+      xyz="-0.11038 0.022023 0.0042647"
+      rpy="-0.087265 -0.01032 -0.11741" />
+    <parent
+      link="base_link" />
+    <child
+      link="lf_proximal_link" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="lf_distal_link">
+    <inertial>
+      <origin
+        xyz="0.000767689272786018 0.00709502748242069 -0.00275676019924219"
+        rpy="0 0 0" />
+      <mass
+        value="0.000118307873360846" />
+      <inertia
+        ixx="1.56288942428636E-09"
+        ixy="-7.07114720600941E-24"
+        ixz="6.09144315085723E-13"
+        iyy="9.99018439677074E-11"
+        iyz="2.44422177486616E-23"
+        izz="1.56562564544593E-09" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://rohand_gen2_urdf_ros2/meshes_r/lf_distal_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://rohand_gen2_urdf_ros2/meshes_r/lf_distal_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="lf_distal_link"
+    type="continuous">
+    <origin
+      xyz="-0.029816 0 -0.011429"
+      rpy="0 0 0" />
+    <parent
+      link="lf_proximal_link" />
+    <child
+      link="lf_distal_link" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="lf_connecting_link">
+    <inertial>
+      <origin
+        xyz="-0.0100662879533409 0.00489991356749507 -0.0114498505586052"
+        rpy="0 0 0" />
+      <mass
+        value="0.000176992753343061" />
+      <inertia
+        ixx="1.1027719497612E-08"
+        ixy="-1.82028202375683E-23"
+        ixz="-9.41607877798546E-09"
+        iyy="1.94958291708419E-08"
+        iyz="-7.02586532787228E-23"
+        izz="8.48698890025318E-09" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://rohand_gen2_urdf_ros2/meshes_r/lf_connecting_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://rohand_gen2_urdf_ros2/meshes_r/lf_connecting_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="lf_connecting_link"
+    type="continuous">
+    <origin
+      xyz="-0.11738 0.02595 0.0084121"
+      rpy="-0.087265 -0.01032 -0.11741" />
+    <parent
+      link="base_link" />
+    <child
+      link="lf_connecting_link" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="th_root_link">
+    <inertial>
+      <origin
+        xyz="-0.0453751988515477 0.0149076215661516 0.0295399288681399"
+        rpy="0 0 0" />
+      <mass
+        value="0.0733985032398848" />
+      <inertia
+        ixx="5.85128935306184E-05"
+        ixy="-5.79360070897767E-06"
+        ixz="1.61225569783204E-05"
+        iyy="0.000124041157342654"
+        iyz="-7.46866908293662E-06"
+        izz="0.000148802841791448" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://rohand_gen2_urdf_ros2/meshes_r/th_root_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://rohand_gen2_urdf_ros2/meshes_r/th_root_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="th_root_link"
+    type="revolute">
+    <origin
+      xyz="-0.025193 -0.019549 -0.018448"
+      rpy="-0.00287 -0.21841 0.013245" />
+    <parent
+      link="base_link" />
+    <child
+      link="th_root_link" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="0"
+      upper="1.57"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="th_proximal_link">
+    <inertial>
+      <origin
+        xyz="0.0277810536466406 -0.000978052258933521 -0.0077042702941093"
+        rpy="0 0 0" />
+      <mass
+        value="0.00544330421208834" />
+      <inertia
+        ixx="3.31208813914978E-07"
+        ixy="-1.0159505735982E-07"
+        ixz="-7.34002665674775E-10"
+        iyy="1.97555613544671E-06"
+        iyz="6.17552512093014E-11"
+        izz="2.19953237868892E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://rohand_gen2_urdf_ros2/meshes_r/th_proximal_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://rohand_gen2_urdf_ros2/meshes_r/th_proximal_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="th_proximal_link"
+    type="continuous">
+    <origin
+      xyz="-0.028307 -0.023252 -0.0029666"
+      rpy="-2.8064 0.0045041 3.1287" />
+    <parent
+      link="th_root_link" />
+    <child
+      link="th_proximal_link" />
+    <axis
+      xyz="0 0 -1" />
+  </joint>
+  <link
+    name="th_slider_link">
+    <inertial>
+      <origin
+        xyz="-0.0162573526322155 -4.28184957185287E-05 1.50391571127027E-05"
+        rpy="0 0 0" />
+      <mass
+        value="0.00164989230216945" />
+      <inertia
+        ixx="3.02687543952134E-08"
+        ixy="-1.27137390044313E-09"
+        ixz="4.46547877426928E-10"
+        iyy="1.71541129452377E-07"
+        iyz="-8.29606440712199E-09"
+        izz="1.50835671556497E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://rohand_gen2_urdf_ros2/meshes_r/th_slider_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://rohand_gen2_urdf_ros2/meshes_r/th_slider_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="th_slider_link"
+    type="prismatic">
+    <origin
+      xyz="0.014212 -0.0023514 -0.0077"
+      rpy="-2.8038 0 3.0123" />
+    <parent
+      link="th_proximal_link" />
+    <child
+      link="th_slider_link" />
+    <axis
+      xyz="-1 0 0" />
+    <limit
+      lower="-0.003"
+      upper="0.003"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="th_connecting_link">
+    <inertial>
+      <origin
+        xyz="-0.00476309757255854 0.000123458831931142 0.00456032790362911"
+        rpy="0 0 0" />
+      <mass
+        value="0.000337391875240177" />
+      <inertia
+        ixx="2.24100251455087E-09"
+        ixy="3.21300953456795E-10"
+        ixz="-2.37902769822236E-14"
+        iyy="5.67134782297393E-09"
+        iyz="1.54014550314264E-14"
+        izz="5.07983571117071E-09" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://rohand_gen2_urdf_ros2/meshes_r/th_connecting_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://rohand_gen2_urdf_ros2/meshes_r/th_connecting_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="th_connecting_link"
+    type="continuous">
+    <origin
+      xyz="-0.0340999999274571 -0.00309060345004721 -0.0037899565057163"
+      rpy="-0.335166812648025 -0.0427408662491538 -0.122062712839907" />
+    <parent
+      link="th_slider_link" />
+    <child
+      link="th_connecting_link" />
+    <axis
+      xyz="0 0 -1" />
+  </joint>
+  <link
+    name="th_distal_link">
+    <inertial>
+      <origin
+        xyz="-0.000146456335801647 -0.0056320990764619 0.00703724813276488"
+        rpy="0 0 0" />
+      <mass
+        value="0.000147202412610839" />
+      <inertia
+        ixx="2.47565227887489E-09"
+        ixy="-4.11762266959021E-13"
+        ixz="-1.84372772245703E-15"
+        iyy="2.47876566767094E-09"
+        iyz="6.63704797588013E-17"
+        izz="1.27242556407081E-10" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://rohand_gen2_urdf_ros2/meshes_r/th_distal_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://rohand_gen2_urdf_ros2/meshes_r/th_distal_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="th_distal_link"
+    type="continuous">
+    <origin
+      xyz="0.057388 0.0037551 5E-05"
+      rpy="3.1416 0 3.1416" />
+    <parent
+      link="th_proximal_link" />
+    <child
+      link="th_distal_link" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+</robot>
