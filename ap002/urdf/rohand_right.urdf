@@ -1,0 +1,1402 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="rohand_right">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="-0.0594598205532223 -0.0015842856425926 0.0039525034897561"
+        rpy="0 0 0" />
+      <mass
+        value="0.057306287534207" />
+      <inertia
+        ixx="2.52783043941087E-05"
+        ixy="-1.2347667663155E-06"
+        ixz="1.25352117107528E-06"
+        iyy="3.34484178513287E-05"
+        iyz="-4.62074104438876E-07"
+        izz="5.18958623113505E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ap002/meshes_r/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ap002/meshes_r/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="if_slider_link">
+    <inertial>
+      <origin
+        xyz="-0.013831635575345 -0.0011545530684645 1.1122339508866E-06"
+        rpy="0 0 0" />
+      <mass
+        value="0.000489119055648473" />
+      <inertia
+        ixx="4.60380697168459E-09"
+        ixy="-2.8128897761249E-09"
+        ixz="-3.76292930091522E-12"
+        iyy="3.82310039480031E-08"
+        iyz="-7.16455465763657E-11"
+        izz="3.92701543887399E-08" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ap002/meshes_r/if_slider_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ap002/meshes_r/if_slider_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="if_slider_link"
+    type="prismatic">
+    <origin
+      xyz="-0.074395 -0.026653 -0.0060564"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="if_slider_link" />
+    <axis
+      xyz="0.99655 0.083049 0" />
+    <limit
+      lower="0"
+      upper="0.019"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="if_slider_abpart_link">
+    <inertial>
+      <origin
+        xyz="-0.010792647724601 0.00265319451394757 -0.000308383767089316"
+        rpy="0 0 0" />
+      <mass
+        value="0.000420507474301528" />
+      <inertia
+        ixx="1.79113566177014E-09"
+        ixy="-2.66197006137322E-10"
+        ixz="-7.33607685710042E-10"
+        iyy="5.74486186201519E-09"
+        iyz="-1.00318125028106E-10"
+        izz="6.20458102255467E-09" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ap002/meshes_r/if_slider_abpart_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ap002/meshes_r/if_slider_abpart_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="if_slider_abpart_link"
+    type="continuous">
+    <origin
+      xyz="-0.02861 -0.0058839 -0.00030477"
+      rpy="0 0 0" />
+    <parent
+      link="if_slider_link" />
+    <child
+      link="if_slider_abpart_link" />
+    <axis
+      xyz="-0.082734 0.99276 0.087135" />
+  </joint>
+  <link
+    name="if_proximal_link">
+    <inertial>
+      <origin
+        xyz="-0.0180496830837503 0.00589050272117256 -0.0016252587541568"
+        rpy="0 0 0" />
+      <mass
+        value="0.00193521233547978" />
+      <inertia
+        ixx="1.04823092063102E-07"
+        ixy="-1.16863992115951E-08"
+        ixz="1.1721870188583E-08"
+        iyy="2.31533842911005E-07"
+        iyz="6.3654906820491E-10"
+        izz="2.36422926954926E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ap002/meshes_r/if_proximal_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ap002/meshes_r/if_proximal_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="if_proximal_link"
+    type="continuous">
+    <origin
+      xyz="-0.1124 -0.03777 0.001883"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="if_proximal_link" />
+    <axis
+      xyz="-0.082734 0.99276 0.087135" />
+  </joint>
+  <link
+    name="if_distal_link">
+    <inertial>
+      <origin
+        xyz="-0.0186866910849812 0.00656468989543482 -0.00500003873557305"
+        rpy="0 0 0" />
+      <mass
+        value="0.00368602257322728" />
+      <inertia
+        ixx="1.15567101384938E-07"
+        ixy="-2.38632253926633E-08"
+        ixz="-1.5672247820983E-07"
+        iyy="5.69984292039066E-07"
+        iyz="-9.93898168295336E-09"
+        izz="5.39365446688757E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ap002/meshes_r/if_distal_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ap002/meshes_r/if_distal_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="if_distal_link"
+    type="continuous">
+    <origin
+      xyz="-0.035686 -0.0031445 -0.0026473"
+      rpy="0 0 0" />
+    <parent
+      link="if_proximal_link" />
+    <child
+      link="if_distal_link" />
+    <axis
+      xyz="-0.082734 0.99276 0.087135" />
+  </joint>
+  <link
+    name="if_connecting_link">
+    <inertial>
+      <origin
+        xyz="-0.0154547065444537 0.00429075193695488 -0.00732542559443374"
+        rpy="0 0 0" />
+      <mass
+        value="0.000200341201168565" />
+      <inertia
+        ixx="5.08501796821968E-09"
+        ixy="-9.24050156786457E-10"
+        ixz="-1.00007977652606E-08"
+        iyy="2.66632993605147E-08"
+        iyz="-3.92736100379404E-10"
+        izz="2.16847259198347E-08" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ap002/meshes_r/if_connecting_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ap002/meshes_r/if_connecting_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="if_connecting_link"
+    type="continuous">
+    <origin
+      xyz="-0.11996 -0.036485 0.0064667"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="if_connecting_link" />
+    <axis
+      xyz="-0.082734 0.99276 0.087135" />
+  </joint>
+  <link
+    name="mf_slider_link">
+    <inertial>
+      <origin
+        xyz="-0.013878589215898 -0.000185360259151651 2.0772729893842E-08"
+        rpy="0 0 0" />
+      <mass
+        value="0.000489121840418294" />
+      <inertia
+        ixx="4.3758951711753E-09"
+        ixy="-4.42888910334709E-10"
+        ixz="-1.35618839672741E-11"
+        iyy="3.84534016481485E-08"
+        iyz="-3.22383868727002E-13"
+        izz="3.927712225522E-08" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ap002/meshes_r/mf_slider_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ap002/meshes_r/mf_slider_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="mf_slider_link"
+    type="prismatic">
+    <origin
+      xyz="-0.076975 -0.010074 -0.0017885"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="mf_slider_link" />
+    <axis
+      xyz="0.99991 0.013228 0.00010039" />
+    <limit
+      lower="0"
+      upper="0.019"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="mf_slider_abpart_link">
+    <inertial>
+      <origin
+        xyz="-0.0105797055527552 0.00336041304794029 -0.000627111683056484"
+        rpy="0 0 0" />
+      <mass
+        value="0.000420507674539902" />
+      <inertia
+        ixx="1.77668777307623E-09"
+        ixy="-5.2594692149351E-11"
+        ixz="-7.47072340493542E-10"
+        iyy="5.7575430390576E-09"
+        iyz="-9.92059123287959E-12"
+        izz="6.20634747073677E-09" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ap002/meshes_r/mf_slider_abpart_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ap002/meshes_r/mf_slider_abpart_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="mf_slider_abpart_link"
+    type="continuous">
+    <origin
+      xyz="-0.028951 -0.0038841 0"
+      rpy="0 0 0" />
+    <parent
+      link="mf_slider_link" />
+    <child
+      link="mf_slider_abpart_link" />
+    <axis
+      xyz="-0.013228 0.99991 7.2594E-05" />
+  </joint>
+  <link
+    name="mf_proximal_link">
+    <inertial>
+      <origin
+        xyz="-0.0196712052006721 0.00734062699292744 -0.00259302539500836"
+        rpy="0 0 0" />
+      <mass
+        value="0.00237725114711697" />
+      <inertia
+        ixx="1.38388623202142E-07"
+        ixy="-2.95839181890821E-09"
+        ixz="1.62802421566863E-08"
+        iyy="3.62176667266172E-07"
+        iyz="2.15550472391916E-10"
+        izz="3.530672461481E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ap002/meshes_r/mf_proximal_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ap002/meshes_r/mf_proximal_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="mf_proximal_link"
+    type="continuous">
+    <origin
+      xyz="-0.11567 -0.018188 0.006807"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="mf_proximal_link" />
+    <axis
+      xyz="-0.013228 0.99991 7.2594E-05" />
+  </joint>
+  <link
+    name="mf_distal_link">
+    <inertial>
+      <origin
+        xyz="-0.0187159062113693 0.00651053186668944 -0.00360333975244769"
+        rpy="0 0 0" />
+      <mass
+        value="0.00368154775103648" />
+      <inertia
+        ixx="8.47473570056372E-08"
+        ixy="-6.04987005071786E-09"
+        ixz="-1.05750736091708E-07"
+        iyy="5.71017111655885E-07"
+        iyz="-1.10457785075032E-09"
+        izz="5.69132142679589E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ap002/meshes_r/mf_distal_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ap002/meshes_r/mf_distal_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="mf_distal_link"
+    type="continuous">
+    <origin
+      xyz="-0.040926 0.00035348 -0.0027079"
+      rpy="0 0 0" />
+    <parent
+      link="mf_proximal_link" />
+    <child
+      link="mf_distal_link" />
+    <axis
+      xyz="-0.013228 0.99991 7.2594E-05" />
+  </joint>
+  <link
+    name="mf_connecting_link">
+    <inertial>
+      <origin
+        xyz="-0.0178847893084422 0.00466439504695792 -0.00781702876841565"
+        rpy="0 0 0" />
+      <mass
+        value="0.000215108929572691" />
+      <inertia
+        ixx="5.1295955899467E-09"
+        ixy="-4.24956542666923E-10"
+        ixz="-1.23172951675142E-08"
+        iyy="3.7315139310925E-08"
+        iyz="-1.62572798752036E-10"
+        izz="3.22197088893095E-08" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ap002/meshes_r/mf_connecting_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ap002/meshes_r/mf_connecting_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="mf_connecting_link"
+    type="continuous">
+    <origin
+      xyz="-0.12313 -0.015587 0.011207"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="mf_connecting_link" />
+    <axis
+      xyz="-0.013228 0.99991 7.2594E-05" />
+  </joint>
+  <link
+    name="rf_slider_link">
+    <inertial>
+      <origin
+        xyz="-0.0138577099866242 0.000783240109712953 9.4562735732974E-08"
+        rpy="0 0 0" />
+      <mass
+        value="0.000489121825321797" />
+      <inertia
+        ixx="4.4800833093081E-09"
+        ixy="1.9328151343956E-09"
+        ixz="-1.33692628805878E-11"
+        iyy="3.83492121046672E-08"
+        iyz="6.08450900358193E-13"
+        izz="3.92771210371841E-08" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ap002/meshes_r/rf_slider_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ap002/meshes_r/rf_slider_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="rf_slider_link"
+    type="prismatic">
+    <origin
+      xyz="-0.074498 0.007252 -0.0025334"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="rf_slider_link" />
+    <axis
+      xyz="0.9984 -0.056557 9.5082E-05" />
+    <limit
+      lower="0"
+      upper="0.019"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="rf_slider_abpart_link">
+    <inertial>
+      <origin
+        xyz="-0.0103201446384482 0.00409029051149556 -0.000616318011104863"
+        rpy="0 0 0" />
+      <mass
+        value="0.000420507290587519" />
+      <inertia
+        ixx="1.78721915567324E-09"
+        ixy="2.25029339607063E-10"
+        ixz="-7.41421655425381E-10"
+        iyy="5.74548024914982E-09"
+        iyz="4.19594802448141E-11"
+        izz="6.20786455811119E-09" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ap002/meshes_r/rf_slider_abpart_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ap002/meshes_r/rf_slider_abpart_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="rf_slider_abpart_link"
+    type="continuous">
+    <origin
+      xyz="-0.029152 -0.0018551 0"
+      rpy="0 0 0" />
+    <parent
+      link="rf_slider_link" />
+    <child
+      link="rf_slider_abpart_link" />
+    <axis
+      xyz="0.056557 0.9984 7.942E-05" />
+  </joint>
+  <link
+    name="rf_proximal_link">
+    <inertial>
+      <origin
+        xyz="-0.0170399835117028 0.008577218731606 -0.0022620810008822"
+        rpy="0 0 0" />
+      <mass
+        value="0.00193519161707551" />
+      <inertia
+        ixx="1.04171019954854E-07"
+        ixy="7.261503701644E-09"
+        ixz="1.17493911846194E-08"
+        iyy="2.32150566180671E-07"
+        iyz="-6.67690489157907E-10"
+        izz="2.36451566833841E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ap002/meshes_r/rf_proximal_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ap002/meshes_r/rf_proximal_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="rf_proximal_link"
+    type="continuous">
+    <origin
+      xyz="-0.11367 0.001857 0.0060623"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="rf_proximal_link" />
+    <axis
+      xyz="0.056557 0.9984 7.942E-05" />
+  </joint>
+  <link
+    name="rf_distal_link">
+    <inertial>
+      <origin
+        xyz="-0.0176161555862342 0.00863806039183797 -0.00568724449639809"
+        rpy="0 0 0" />
+      <mass
+        value="0.0036860282462005" />
+      <inertia
+        ixx="1.16277853163683E-07"
+        ixy="2.61176403176225E-08"
+        ixz="-1.5740106043389E-07"
+        iyy="5.69604698080497E-07"
+        iyz="9.25420409589483E-09"
+        izz="5.39039591903928E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ap002/meshes_r/rf_distal_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ap002/meshes_r/rf_distal_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="rf_distal_link"
+    type="continuous">
+    <origin
+      xyz="-0.035767 0.0020263 -0.0026255"
+      rpy="0 0 0" />
+    <parent
+      link="rf_proximal_link" />
+    <child
+      link="rf_distal_link" />
+    <axis
+      xyz="0.056557 0.9984 7.942E-05" />
+  </joint>
+  <link
+    name="rf_connecting_link">
+    <inertial>
+      <origin
+        xyz="-0.0147430647284838 0.00574362787107162 -0.00778287530349062"
+        rpy="0 0 0" />
+      <mass
+        value="0.000200341201168544" />
+      <inertia
+        ixx="5.15185975480314E-09"
+        ixy="1.22177923649329E-09"
+        ixz="-1.00223605817499E-08"
+        iyy="2.66365806523084E-08"
+        iyz="5.68145707349384E-10"
+        izz="2.16446028414532E-08" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ap002/meshes_r/rf_connecting_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ap002/meshes_r/rf_connecting_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="rf_connecting_link"
+    type="continuous">
+    <origin
+      xyz="-0.12092 0.0049721 0.010462"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="rf_connecting_link" />
+    <axis
+      xyz="0.056557 0.9984 7.942E-05" />
+  </joint>
+  <link
+    name="lf_slider_link">
+    <inertial>
+      <origin
+        xyz="-0.0137830612026878 0.00163667322868803 4.23116876112784E-07"
+        rpy="0 0 0" />
+      <mass
+        value="0.000489123695032286" />
+      <inertia
+        ixx="4.84682946250111E-09"
+        ixy="4.00325415443712E-09"
+        ixz="-5.09012097682969E-12"
+        iyy="3.7989208167421E-08"
+        iyz="7.20335900419132E-11"
+        izz="3.92715139348602E-08" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ap002/meshes_r/lf_slider_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ap002/meshes_r/lf_slider_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="lf_slider_link"
+    type="prismatic">
+    <origin
+      xyz="-0.070846 0.024185 -0.0050529"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="lf_slider_link" />
+    <axis
+      xyz="0.99301 -0.11803 8.2704E-05" />
+    <limit
+      lower="0"
+      upper="0.019"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="lf_slider_abpart_link">
+    <inertial>
+      <origin
+        xyz="-0.0100490137875516 0.00464019203587344 -0.00104957635421961"
+        rpy="0 0 0" />
+      <mass
+        value="0.000420507084295905" />
+      <inertia
+        ixx="1.83259490660751E-09"
+        ixy="3.97558299757633E-10"
+        ixz="-7.84440459795868E-10"
+        iyy="5.72250116562858E-09"
+        iyz="1.30881819927778E-10"
+        izz="6.18546536355247E-09" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ap002/meshes_r/lf_slider_abpart_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ap002/meshes_r/lf_slider_abpart_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="lf_slider_abpart_link"
+    type="continuous">
+    <origin
+      xyz="-0.029209 -4.0109E-05 0.00030326"
+      rpy="0 0 0" />
+    <parent
+      link="lf_slider_link" />
+    <child
+      link="lf_slider_abpart_link" />
+    <axis
+      xyz="0.11759 0.98923 -0.08715" />
+  </joint>
+  <link
+    name="lf_proximal_link">
+    <inertial>
+      <origin
+        xyz="-0.0147962357853259 0.00917743804808117 -0.00300240557219596"
+        rpy="0 0 0" />
+      <mass
+        value="0.00177933175019616" />
+      <inertia
+        ixx="9.55270024273464E-08"
+        ixy="9.90634559553904E-09"
+        ixz="3.09925975716038E-09"
+        iyy="1.75395079675161E-07"
+        iyz="1.24414554180971E-10"
+        izz="1.82178300077885E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ap002/meshes_r/lf_proximal_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ap002/meshes_r/lf_proximal_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="lf_proximal_link"
+    type="continuous">
+    <origin
+      xyz="-0.11038 0.022014 0.0041735"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="lf_proximal_link" />
+    <axis
+      xyz="0.11759 0.98923 -0.08715" />
+  </joint>
+  <link
+    name="lf_distal_link">
+    <inertial>
+      <origin
+        xyz="-0.0100218479799011 0.00833350887381993 -0.00553301006284393"
+        rpy="0 0 0" />
+      <mass
+        value="0.00169069978886813" />
+      <inertia
+        ixx="2.54209688117264E-08"
+        ixy="3.48453044503919E-09"
+        ixz="-1.1779350157212E-08"
+        iyy="6.61809659107123E-08"
+        iyz="1.79894860869183E-09"
+        izz="7.15973374970536E-08" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ap002/meshes_r/lf_distal_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ap002/meshes_r/lf_distal_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="lf_distal_link"
+    type="continuous">
+    <origin
+      xyz="-0.031559 0.0034498 -0.0034245"
+      rpy="0 0 0" />
+    <parent
+      link="lf_proximal_link" />
+    <child
+      link="lf_distal_link" />
+    <axis
+      xyz="0.11759 0.98923 -0.08715" />
+  </joint>
+  <link
+    name="lf_connecting_link">
+    <inertial>
+      <origin
+        xyz="-0.0127597088897377 0.00578680430370245 -0.00775506988696062"
+        rpy="0 0 0" />
+      <mass
+        value="0.000176992753343063" />
+      <inertia
+        ixx="4.76624125635707E-09"
+        ixy="1.0442736903381E-09"
+        ixz="-8.02108014109873E-09"
+        iyy="1.94194419058343E-08"
+        iyz="5.41966748685009E-10"
+        izz="1.48248544065163E-08" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ap002/meshes_r/lf_connecting_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ap002/meshes_r/lf_connecting_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="lf_connecting_link"
+    type="continuous">
+    <origin
+      xyz="-0.11738 0.025941 0.0083209"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="lf_connecting_link" />
+    <axis
+      xyz="0.11759 0.98923 -0.08715" />
+  </joint>
+  <link
+    name="th_root_link">
+    <inertial>
+      <origin
+        xyz="-0.0181653033705998 -0.006137687481117 -0.00621049437186357"
+        rpy="0 0 0" />
+      <mass
+        value="0.00217782331598597" />
+      <inertia
+        ixx="1.93144552567692E-07"
+        ixy="-7.97176090536384E-08"
+        ixz="-1.81161578981605E-08"
+        iyy="1.98082870195368E-07"
+        iyz="-2.93584365192332E-08"
+        izz="2.23576308958899E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ap002/meshes_r/th_root_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ap002/meshes_r/th_root_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="th_root_link"
+    type="revolute">
+    <origin
+      xyz="-0.025193 -0.019558 -0.018539"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="th_root_link" />
+    <axis
+      xyz="0.97616 0.01293 0.21667" />
+    <limit
+      lower="0"
+      upper="1.57"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="th_proximal_link">
+    <inertial>
+      <origin
+        xyz="-0.0204390378926562 -0.0120871755145228 0.00335414340698235"
+        rpy="0 0 0" />
+      <mass
+        value="0.00544221996253783" />
+      <inertia
+        ixx="7.53815888470505E-07"
+        ixy="-6.64737917114329E-07"
+        ixz="-3.20269022895288E-07"
+        iyy="1.61776993562885E-06"
+        iyz="-1.47963464952406E-07"
+        izz="2.12278593287951E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ap002/meshes_r/th_proximal_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ap002/meshes_r/th_proximal_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="th_proximal_link"
+    type="continuous">
+    <origin
+      xyz="-0.024954 -0.021343 -0.016243"
+      rpy="0 0 0" />
+    <parent
+      link="th_root_link" />
+    <child
+      link="th_proximal_link" />
+    <axis
+      xyz="-0.21669 0 0.97624" />
+  </joint>
+  <link
+    name="th_slider_link">
+    <inertial>
+      <origin
+        xyz="-0.00926657693655221 -0.00600783676519899 -0.00205714738144441"
+        rpy="0 0 0" />
+      <mass
+        value="0.000966938543812055" />
+      <inertia
+        ixx="4.79184407027397E-08"
+        ixy="-2.59783292252667E-08"
+        ixz="-2.78515442976993E-09"
+        iyy="5.59959414894532E-08"
+        iyz="-5.7663723942296E-09"
+        izz="5.98505621562812E-08" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ap002/meshes_r/th_slider_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ap002/meshes_r/th_slider_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="th_slider_link"
+    type="prismatic">
+    <origin
+      xyz="-0.0046289 -0.005005 0.0068599"
+      rpy="0 0 0" />
+    <parent
+      link="th_proximal_link" />
+    <child
+      link="th_slider_link" />
+    <axis
+      xyz="-0.76077 -0.62667 -0.16887" />
+    <limit
+      lower="0"
+      upper="0.007"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="th_connecting_link">
+    <inertial>
+      <origin
+        xyz="-0.00506312918485401 -0.00240239494349306 0.00350321467425465"
+        rpy="0 0 0" />
+      <mass
+        value="0.000332928331878979" />
+      <inertia
+        ixx="2.97887865285235E-09"
+        ixy="-1.34129839107658E-09"
+        ixz="-4.6422789939058E-10"
+        iyy="5.02555870230475E-09"
+        iyz="-2.97717799088162E-10"
+        izz="4.96729310931265E-09" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ap002/meshes_r/th_connecting_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ap002/meshes_r/th_connecting_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="th_connecting_link"
+    type="continuous">
+    <origin
+      xyz="-0.025 -0.021619 -0.010261"
+      rpy="0 0 0" />
+    <parent
+      link="th_slider_link" />
+    <child
+      link="th_connecting_link" />
+    <axis
+      xyz="-0.21669 0 0.97624" />
+  </joint>
+  <link
+    name="th_distal_link">
+    <inertial>
+      <origin
+        xyz="-0.00267755960294424 -0.0097919145388656 0.00729584143287598"
+        rpy="0 0 0" />
+      <mass
+        value="0.00258974680570065" />
+      <inertia
+        ixx="1.40636900254569E-07"
+        ixy="-1.66574886220681E-08"
+        ixz="8.97977649745621E-09"
+        iyy="1.2746781639085E-07"
+        iyz="-3.93201629122491E-09"
+        izz="1.01269336314391E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ap002/meshes_r/th_distal_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ap002/meshes_r/th_distal_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="th_distal_link"
+    type="continuous">
+    <origin
+      xyz="-0.045842 -0.023497 -0.010227"
+      rpy="0 0 0" />
+    <parent
+      link="th_proximal_link" />
+    <child
+      link="th_distal_link" />
+    <axis
+      xyz="-0.21669 0 0.97624" />
+  </joint>
+</robot>

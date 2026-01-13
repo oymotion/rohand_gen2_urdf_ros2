@@ -11,36 +11,10 @@ cd ros2_ws/src
 git clone ssh://git@github.com/oymotion/rohand_gen2_urdf_ros2
 ```
 
-## 2.Compile
+## 2.Description
 
-```BASH
-colcon build
-source install/setup.bash
-```
+ap001:urdf for ROH-AP001
 
-## 4.Node rohand_urdf
+ap002:urdf for ROH-AP002
 
-| Topic             | Description                                                               |
-| ----------------- | ------------------------------------------------------------------------- |
-| "if_slider_joint" | slider for index finger, control index finger by changing it's position   |
-| "mf_slider_joint" | slider for middle finger, control middle finger by changing it's position |
-| "rf_slider_joint" | slider for ring finger, control ring finger by changing it's position     |
-| "lf_slider_joint" | slider for little finger, control little finger by changing it's position |
-| "th_slider_joint" | slider for thumb, control thumb by changing it's position                 |
-| "th_root_joint"   | slider for thumb root, control thumb root by changing it's position       |
 
-## 5.RUN
-
-Launch 'launch.py' file:
-Left hand：
-
-```BASH
-ros2 launch rohand_gen2_urdf_ros2 left_rviz2.launch.py 
-```
-
-Right hand：
-
-```BASH
-ros2 launch rohand_gen2_urdf_ros2 right_rviz2.launch.py
-```
-"# rohand_gen2_urdf_ros2" 
