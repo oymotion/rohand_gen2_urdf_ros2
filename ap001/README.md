@@ -44,3 +44,10 @@ Right hand：
 ros2 launch ap001 right_rviz2.launch.py
 ```
 
+## 6.FAQs
+
+When the model of the rohand in the program is lost,please run the command below (if humble):  
+
+```BASH
+sudo apt install ros-humble-joint-state-publisher ros-humble-joint-state-publisher-gui
+```
